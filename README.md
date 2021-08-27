@@ -5,10 +5,10 @@
   <br/>
   <br/>
   <p>
-    <h3>Errors</h3>
+    <h3>HTTP Errors</h3>
   </p>
   <p>
-    JavaScript error classes with useful defaults
+    An HTTP error class throwing with proper status codes
   </p>
   <br/>
   <p>
@@ -29,11 +29,11 @@
 ---
 
 ## Introduction
-The `@supercharge/http-errors` package provides error classes with useful defaults. This avoids the boilerplate of setting up a custom error class in different projects.
+The `@supercharge/http-errors` package provides an HTTP error class with useful defaults.
 
-- provides an `Error` base class capturing the stack trace by default
-- every error has a `name` property providing the error’s class name
-- exposes an `HttpError` class with HTTP `status` and error `code` properties
+- provides an `HttpError` base class with defaults to throw proper HTTP errors
+- the `HttpError` base class captures stack traces by default
+- create your own HTTP error with custom HTTP status code, title, and error code
 
 
 ## Installation
@@ -44,22 +44,21 @@ npm i @supercharge/http-errors
 
 
 ## Quick Usage Overview
-Using `@supercharge/http-errors` is pretty straightforward. The package exports error classes that you can use like the native `Error` class.
+Using `@supercharge/http-errors` is pretty straightforward. The package exports the `HttpError` class that you can use like the native `Error` class.
 
 ```js
-const { Error, HttpError } = require('@supercharge/http-errors')
+const { HttpError } = require('@supercharge/http-errors')
 
-// works like the native `Error` class and also contains the stacktrace
-throw new Error('your error message')
+// create an HTTP 400 BadRequest error yourself
+throw new HttpError('invalid request input data', 400)
 
-// the HTTP Error provides a fluent interface to customize the properties
+// … or throw using shortcut methods
+throw HttpError.badRequest('Request validation failed')
+
+// … or use a fluent interface to customize the properties
 throw new HttpError('Request validation failed')
   .withStatus(400)
   .withCode('E_YOUR_CUSTOM_ERROR_CODE')
-
-// or create an HTTP error by passing all arguments to the constructor
-throw new HttpError('Request validation failed', 400, 'E_YOUR_CUSTOM_ERROR_CODE')
-
 ```
 
 
