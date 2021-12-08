@@ -4,6 +4,17 @@ import { HttpError as BaseHttpError } from '@supercharge/errors'
 
 export class HttpError extends BaseHttpError {
   /**
+   * Determine whether the given `error` is an `HttpError` instance.
+   *
+   * @param {Error} error
+   *
+   * @returns {Boolean}
+   */
+  static isHttpError (error: Error): error is HttpError {
+    return error instanceof HttpError
+  }
+
+  /**
    * Creates a Bad Request error.
    *
    * @param {String} message
