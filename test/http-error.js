@@ -4,6 +4,12 @@ const { test } = require('uvu')
 const expect = require('expect')
 const { HttpError } = require('../dist')
 
+test('isHttpError', () => {
+  expect(HttpError.isHttpError(HttpError.badRequest('message'))).toBe(true)
+
+  expect(HttpError.isHttpError(new Error('message'))).toBe(false)
+})
+
 test('throw', () => {
   expect(() => {
     throw new HttpError('Failing')
