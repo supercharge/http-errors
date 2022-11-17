@@ -5,6 +5,7 @@
 
 ### Updated
 - bump dependencies
+- use `@supercharge/eslint-config-typescript` instead of `standard-with-typescript`
 
 ### Breaking Changes
 - require Node.js v16, drop support for Node.js v12 and v14
