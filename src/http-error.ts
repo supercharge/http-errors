@@ -23,7 +23,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static badRequest (message: string, code?: string): HttpError {
-    return new this(message, 400, code).withTitle('Bad Request')
+    return new this(message).withStatus(400).withCode(code).withTitle('Bad Request')
   }
 
   /**
@@ -35,7 +35,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static unauthorized (message: string, code?: string): HttpError {
-    return new this(message, 401, code).withTitle('Unauthorized')
+    return new this(message).withStatus(401).withCode(code).withTitle('Unauthorized')
   }
 
   /**
@@ -47,7 +47,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static paymentRequired (message: string, code?: string): HttpError {
-    return new this(message, 402, code).withTitle('Payment Required')
+    return new this(message).withStatus(402).withCode(code).withTitle('Payment Required')
   }
 
   /**
@@ -59,7 +59,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static forbidden (message: string, code?: string): HttpError {
-    return new this(message, 403, code).withTitle('Forbidden')
+    return new this(message).withStatus(403).withCode(code).withTitle('Forbidden')
   }
 
   /**
@@ -71,7 +71,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static notFound (message: string, code?: string): HttpError {
-    return new this(message, 404, code).withTitle('Not Found')
+    return new this(message).withStatus(404).withCode(code).withTitle('Not Found')
   }
 
   /**
@@ -83,7 +83,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static methodNotAllowed (message: string, code?: string): HttpError {
-    return new this(message, 405, code).withTitle('Method Not Allowed')
+    return new this(message).withStatus(405).withCode(code).withTitle('Method Not Allowed')
   }
 
   /**
@@ -95,7 +95,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static notAcceptable (message: string, code?: string): HttpError {
-    return new this(message, 406, code).withTitle('Not Acceptable')
+    return new this(message).withStatus(406).withCode(code).withTitle('Not Acceptable')
   }
 
   /**
@@ -107,7 +107,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static proxyAuthRequired (message: string, code?: string): HttpError {
-    return new this(message, 407, code).withTitle('Proxy Authentication Required')
+    return new this(message).withStatus(407).withCode(code).withTitle('Proxy Authentication Required')
   }
 
   /**
@@ -119,7 +119,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static requestTimeout (message: string, code?: string): HttpError {
-    return new this(message, 408, code).withTitle('Request Timeout')
+    return new this(message).withStatus(408).withCode(code).withTitle('Request Timeout')
   }
 
   /**
@@ -131,7 +131,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static conflict (message: string, code?: string): HttpError {
-    return new this(message, 409, code).withTitle('Conflict')
+    return new this(message).withStatus(409).withCode(code).withTitle('Conflict')
   }
 
   /**
@@ -155,7 +155,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static resourceGone (message: string, code?: string): HttpError {
-    return new this(message, 410, code).withTitle('Gone')
+    return new this(message).withStatus(410).withCode(code).withTitle('Gone')
   }
 
   /**
@@ -167,7 +167,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static lengthRequired (message: string, code?: string): HttpError {
-    return new this(message, 411, code).withTitle('Length Required')
+    return new this(message).withStatus(411).withCode(code).withTitle('Length Required')
   }
 
   /**
@@ -179,7 +179,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static preconditionFailed (message: string, code?: string): HttpError {
-    return new this(message, 412, code).withTitle('Precondition Failed')
+    return new this(message).withStatus(412).withCode(code).withTitle('Precondition Failed')
   }
 
   /**
@@ -191,7 +191,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static payloadTooLarge (message: string, code?: string): HttpError {
-    return new this(message, 413, code).withTitle('Payload Too Large')
+    return new this(message).withStatus(413).withCode(code).withTitle('Payload Too Large')
   }
 
   /**
@@ -203,7 +203,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static uriTooLong (message: string, code?: string): HttpError {
-    return new this(message, 414, code).withTitle('Request-URI Too Long')
+    return new this(message).withStatus(414).withCode(code).withTitle('Request-URI Too Long')
   }
 
   /**
@@ -215,7 +215,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static unsupportedMediaType (message: string, code?: string): HttpError {
-    return new this(message, 415, code).withTitle('Unsupported Media Type')
+    return new this(message).withStatus(415).withCode(code).withTitle('Unsupported Media Type')
   }
 
   /**
@@ -227,7 +227,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static rangeNotSatisfiable (message: string, code?: string): HttpError {
-    return new this(message, 416, code).withTitle('Requested Range Not Satisfiable')
+    return new this(message).withStatus(416).withCode(code).withTitle('Requested Range Not Satisfiable')
   }
 
   /**
@@ -239,7 +239,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static expectationFailed (message: string, code?: string): HttpError {
-    return new this(message, 417, code).withTitle('Expectation Failed')
+    return new this(message).withStatus(417).withCode(code).withTitle('Expectation Failed')
   }
 
   /**
@@ -251,7 +251,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static teapot (message: string, code?: string): HttpError {
-    return new this(message, 418, code).withTitle('I\'m a teapot')
+    return new this(message).withStatus(418).withCode(code).withTitle('I\'m a teapot')
   }
 
   /**
@@ -263,7 +263,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static misdirectedRequest (message: string, code?: string): HttpError {
-    return new this(message, 421, code).withTitle('Misdirected Request')
+    return new this(message).withStatus(421).withCode(code).withTitle('Misdirected Request')
   }
 
   /**
@@ -287,7 +287,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static unprocessableEntity (message: string, code?: string): HttpError {
-    return new this(message, 422, code).withTitle('Unprocessable Entity')
+    return new this(message).withStatus(422).withCode(code).withTitle('Unprocessable Entity')
   }
 
   /**
@@ -299,7 +299,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static locked (message: string, code?: string): HttpError {
-    return new this(message, 423, code).withTitle('Locked')
+    return new this(message).withStatus(423).withCode(code).withTitle('Locked')
   }
 
   /**
@@ -311,7 +311,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static failedDependency (message: string, code?: string): HttpError {
-    return new this(message, 424, code).withTitle('Failed Dependency')
+    return new this(message).withStatus(424).withCode(code).withTitle('Failed Dependency')
   }
 
   /**
@@ -323,7 +323,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static tooEarly (message: string, code?: string): HttpError {
-    return new this(message, 425, code).withTitle('Too Early')
+    return new this(message).withStatus(425).withCode(code).withTitle('Too Early')
   }
 
   /**
@@ -335,7 +335,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static upgradeRequired (message: string, code?: string): HttpError {
-    return new this(message, 426, code).withTitle('Upgrade Required')
+    return new this(message).withStatus(426).withCode(code).withTitle('Upgrade Required')
   }
 
   /**
@@ -347,7 +347,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static preconditionRequired (message: string, code?: string): HttpError {
-    return new this(message, 428, code).withTitle('Precondition Required')
+    return new this(message).withStatus(428).withCode(code).withTitle('Precondition Required')
   }
 
   /**
@@ -359,7 +359,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static tooManyRequests (message: string, code?: string): HttpError {
-    return new this(message, 429, code).withTitle('Too Many Requests')
+    return new this(message).withStatus(429).withCode(code).withTitle('Too Many Requests')
   }
 
   /**
@@ -371,7 +371,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static headerFieldsTooLarge (message: string, code?: string): HttpError {
-    return new this(message, 431, code).withTitle('Request Header Fields Too Large')
+    return new this(message).withStatus(431).withCode(code).withTitle('Request Header Fields Too Large')
   }
 
   /**
@@ -383,7 +383,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static illegal (message: string, code?: string): HttpError {
-    return new this(message, 451, code).withTitle('Unavailable For Legal Reasons')
+    return new this(message).withStatus(451).withCode(code).withTitle('Unavailable For Legal Reasons')
   }
 
   /**
@@ -395,7 +395,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static internal (message: string, code?: string): HttpError {
-    return new this(message, 500, code).withTitle('Internal Server Error')
+    return new this(message).withStatus(500).withCode(code).withTitle('Internal Server Error')
   }
 
   /**
@@ -407,7 +407,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static notImplemented (message: string, code?: string): HttpError {
-    return new this(message, 501, code).withTitle('Not Implemented')
+    return new this(message).withStatus(501).withCode(code).withTitle('Not Implemented')
   }
 
   /**
@@ -419,7 +419,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static badGateway (message: string, code?: string): HttpError {
-    return new this(message, 502, code).withTitle('Bad Gateway')
+    return new this(message).withStatus(502).withCode(code).withTitle('Bad Gateway')
   }
 
   /**
@@ -431,7 +431,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static serviceUnavailable (message: string, code?: string): HttpError {
-    return new this(message, 503, code).withTitle('Service Unavailable')
+    return new this(message).withStatus(503).withCode(code).withTitle('Service Unavailable')
   }
 
   /**
@@ -443,7 +443,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static gatewayTimeout (message: string, code?: string): HttpError {
-    return new this(message, 504, code).withTitle('Gateway Timeout')
+    return new this(message).withStatus(504).withCode(code).withTitle('Gateway Timeout')
   }
 
   /**
@@ -455,7 +455,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static httpVersionNotSupported (message: string, code?: string): HttpError {
-    return new this(message, 505, code).withTitle('HTTP Version Not Supported')
+    return new this(message).withStatus(505).withCode(code).withTitle('HTTP Version Not Supported')
   }
 
   /**
@@ -467,7 +467,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static variantNegotiates (message: string, code?: string): HttpError {
-    return new this(message, 506, code).withTitle('Variant Also Negotiates')
+    return new this(message).withStatus(506).withCode(code).withTitle('Variant Also Negotiates')
   }
 
   /**
@@ -479,7 +479,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static insufficientStorage (message: string, code?: string): HttpError {
-    return new this(message, 507, code).withTitle('Insufficient Storage')
+    return new this(message).withStatus(507).withCode(code).withTitle('Insufficient Storage')
   }
 
   /**
@@ -491,7 +491,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static loopDetected (message: string, code?: string): HttpError {
-    return new this(message, 508, code).withTitle('Loop Detected')
+    return new this(message).withStatus(508).withCode(code).withTitle('Loop Detected')
   }
 
   /**
@@ -503,7 +503,7 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static notExtended (message: string, code?: string): HttpError {
-    return new this(message, 509, code).withTitle('Not Extended')
+    return new this(message).withStatus(509).withCode(code).withTitle('Not Extended')
   }
 
   /**
@@ -515,6 +515,6 @@ export class HttpError extends BaseHttpError {
    * @returns {this}
    */
   static networkAuthenticationRequired (message: string, code?: string): HttpError {
-    return new this(message, 510, code).withTitle('Network Authentication Required')
+    return new this(message).withStatus(510).withCode(code).withTitle('Network Authentication Required')
   }
 }

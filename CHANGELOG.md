@@ -1,10 +1,11 @@
 # Changelog
 
 
-## [2.0.0](https://github.com/supercharge/http-errors/compare/v1.1.0...v2.0.0) - 2022-1x-xx
+## [2.0.0](https://github.com/supercharge/http-errors/compare/v1.1.0...v2.0.0) - 2022-11-17
 
 ### Updated
 - bump dependencies
+- update error creation to new fluent methods from `@supercharge/errors`
 - use `@supercharge/eslint-config-typescript` instead of `standard-with-typescript`
 
 ### Breaking Changes
