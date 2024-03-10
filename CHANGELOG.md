@@ -1,7 +1,7 @@
 # Changelog
 
 
-## [3.0.0](https://github.com/supercharge/http-errors/compare/v2.0.0...v3.0.0) - 2023-12-xx
+## [3.0.0](https://github.com/supercharge/http-errors/compare/v2.1.0...v3.0.0) - 2024-03-xx
 
 ### Updated
 - bump dependencies
@@ -12,6 +12,13 @@
 ### Breaking Changes
 - require Node.js v20
 - this package migrated to ESM
+
+
+## [2.1.0](https://github.com/supercharge/http-errors/compare/v2.0.0...v2.1.0) - 2024-03-10
+
+### Updated
+- bump dependencies
+- `isHttpError`: accepts any argument type
 
 
 ## [2.0.0](https://github.com/supercharge/http-errors/compare/v1.1.0...v2.0.0) - 2022-11-17

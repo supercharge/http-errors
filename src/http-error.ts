@@ -5,7 +5,7 @@ export class HttpError extends BaseHttpError {
   /**
    * Determine whether the given `error` is an `HttpError` instance.
    */
-  static isHttpError (error: Error): error is HttpError {
+  static isHttpError (error: any): error is HttpError {
     return error instanceof HttpError
   }
 
