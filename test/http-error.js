@@ -7,6 +7,8 @@ const { HttpError } = require('../dist')
 test('isHttpError', () => {
   expect(HttpError.isHttpError(HttpError.badRequest('message'))).toBe(true)
 
+  expect(HttpError.isHttpError(null)).toBe(false)
+  expect(HttpError.isHttpError(undefined)).toBe(false)
   expect(HttpError.isHttpError(new Error('message'))).toBe(false)
 })
 
