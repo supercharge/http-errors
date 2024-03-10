@@ -1,5 +1,5 @@
-'use strict'
 
-import { HttpError } from './http-error'
+import { HttpError } from './http-error.js'
 
 export { HttpError }
+export default HttpError

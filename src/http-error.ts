@@ -1,4 +1,3 @@
-'use strict'
 
 import { HttpError as BaseHttpError } from '@supercharge/errors'
 

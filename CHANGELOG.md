@@ -1,6 +1,22 @@
 # Changelog
 
 
+## [3.0.0](https://github.com/supercharge/http-errors/compare/v2.1.0...v3.0.0) - 2024-03-xx
+
+### Added
+- add default export allowing users to define their own import name: `import MyHttpErrorVariableName from '@supercharge/http-errors'`
+
+### Updated
+- bump dependencies
+
+### Removed
+- removed JS doc annotations to avoid duplications with TypeScript
+
+### Breaking Changes
+- require Node.js v20
+- this package migrated to ESM
+
+
 ## [2.1.0](https://github.com/supercharge/http-errors/compare/v2.0.0...v2.1.0) - 2024-03-10
 
 ### Updated
