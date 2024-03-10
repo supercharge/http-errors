@@ -1,8 +1,8 @@
 'use strict'
 
-const { test } = require('uvu')
-const { expect } = require('expect')
-const { HttpError } = require('../dist')
+import { test } from 'uvu'
+import { expect } from 'expect'
+import { HttpError } from '../dist/index.js'
 
 test('isHttpError', () => {
   expect(HttpError.isHttpError(HttpError.badRequest('message'))).toBe(true)

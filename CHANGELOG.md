@@ -1,6 +1,19 @@
 # Changelog
 
 
+## [3.0.0](https://github.com/supercharge/http-errors/compare/v2.0.0...v3.0.0) - 2023-12-xx
+
+### Updated
+- bump dependencies
+
+### Removed
+- removed JS doc annotations to avoid duplications with TypeScript
+
+### Breaking Changes
+- require Node.js v20
+- this package migrated to ESM
+
+
 ## [2.0.0](https://github.com/supercharge/http-errors/compare/v1.1.0...v2.0.0) - 2022-11-17
 
 ### Updated
