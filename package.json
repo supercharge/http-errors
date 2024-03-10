@@ -10,14 +10,14 @@
     "@supercharge/errors": "~2.0.1"
   },
   "devDependencies": {
-    "@supercharge/eslint-config-typescript": "~4.0.1",
+    "@supercharge/eslint-config-typescript": "~4.0.2",
     "@supercharge/tsconfig": "~7.0.0",
-    "@types/node": "~20.10.5",
-    "@typescript-eslint/eslint-plugin": "~6.16.0",
-    "c8": "~8.0.1",
-    "eslint": "~8.56.0",
+    "@types/node": "~20.11.25",
+    "@typescript-eslint/eslint-plugin": "~7.1.1",
+    "c8": "~9.1.0",
+    "eslint": "~8.57.0",
     "expect": "~29.7.0",
-    "typescript": "~5.3.3",
+    "typescript": "~5.4.2",
     "uvu": "~0.5.6"
   },
   "engines": {
